@@ -1,0 +1,16 @@
+{
+  "methods": [
+    {
+      "functionName": "translate",
+      "functionParams": [
+        "BACK",
+        800,
+        0.3
+      ]
+    },
+    {
+      "functionName": "getGoldPosition",
+      "functionParams": []
+    }
+  ]
+}
