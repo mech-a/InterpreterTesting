@@ -16,7 +16,9 @@ public class ReflectionFromJSON {
         ExampleAuton auton = gson.fromJson(file, ExampleAuton.class);
 
         ExampleRobot r = new ExampleRobot();
-        
+
+
+        //TODO make this be able to run LinearOpMode functions as well, not just robot. Could be achieved by implementing robot functionality into DejaVuLinearOpMode or robot.sleep point to caller.sleep
         for(MethodData data : auton.methods) {
             try{
                 if(data.functionParams != null) {
