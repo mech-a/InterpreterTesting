@@ -1,4 +1,4 @@
-package ReflectionTesting;
+package ReflectionTesting.SOExample;
 
 public class Dog {
     private String name;

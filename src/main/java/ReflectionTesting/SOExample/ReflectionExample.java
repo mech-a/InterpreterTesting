@@ -1,10 +1,10 @@
-package ReflectionTesting;
+package ReflectionTesting.SOExample;
 
 import java.lang.reflect.*;
 public class ReflectionExample {
 
     public static void main(String[] args) throws Exception {
-        String dogClassName = "ReflectionTesting.Dog";
+        String dogClassName = "ReflectionTesting.SOExample.Dog";
         Class<?> dogClass = Class.forName(dogClassName); // convert string classname to class
         Object dog = dogClass.newInstance(); // invoke empty constructor
 
