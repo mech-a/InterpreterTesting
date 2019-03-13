@@ -1,6 +1,7 @@
 package ReflectionTesting;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
@@ -11,7 +12,8 @@ import java.nio.charset.Charset;
 public class ReflectionFromJSON {
     public static void main(String[] args) throws IOException {
         String file = FileUtils.readFileToString(new File("exampleAuton.json"), Charset.defaultCharset());
-        Gson gson = new Gson();
+        Gson gson = new GsonBuilder().setLenient().create();
+        //Gson gson = new Gson();
 
         ExampleAuton auton = gson.fromJson(file, ExampleAuton.class);
 

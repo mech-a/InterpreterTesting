@@ -34,6 +34,7 @@ public class MethodData {
         //output: package name testing class ReflectionTesting.MethodData
         //System.out.println("package name testing " + this.getClass());
 
+        //TODO find right package
         try{
             Class<?> c = Class.forName("ReflectionTesting" + "." +className);
             return c;
