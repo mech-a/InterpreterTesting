@@ -1,6 +1,8 @@
+//    03-12-2019 19:31:00
 {
   "methods": [
     {
+      "className": "ExampleRobot",
       "functionName": "translate",
       "functionParams": [
         "BACK",
@@ -9,6 +11,7 @@
       ]
     },
     {
+      "className": "ExampleRobot",
       "functionName": "getGoldPosition"
     }
   ]
