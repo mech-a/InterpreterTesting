@@ -10,8 +10,8 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
-    compile 'commons-net:commons-net:3.6'
-    compile 'commons-io:commons-io:2.6'
+    implementation 'commons-net:commons-net:3.6'
+    implementation 'commons-io:commons-io:2.6'
     implementation 'com.google.code.gson:gson:2.8.5'
 }
 

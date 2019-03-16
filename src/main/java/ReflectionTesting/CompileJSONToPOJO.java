@@ -10,13 +10,13 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 
 /**
- * JSON to BOJO converter
+ * JSON to POJO converter
  * Utilizes {@link FileUtils} and {@link File} to get a String from a file, in this case, a JSON file.
- * {@link Gson} deserialization is then performed to transform the JSON into a BOJO of type {@link ExampleAuton}.
+ * {@link Gson} deserialization is then performed to transform the JSON into a POJO of type {@link ExampleAuton}.
  */
 
 
-public class CompileJSONToBOJO {
+public class CompileJSONToPOJO {
     public static void main(String[] args) throws IOException {
         //Turn file into string
         String file = FileUtils.readFileToString(new File("exampleAuton.json"), Charset.defaultCharset());

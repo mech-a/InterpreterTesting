@@ -12,7 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
 
-public class CompileBOJOToJSON {
+public class CompilePOJOToJSON {
     public static void main(String[] args) throws IOException {
         ExampleAuton exampleAuton = new ExampleAuton();
 

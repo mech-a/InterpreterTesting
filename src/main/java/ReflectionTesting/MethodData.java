@@ -30,7 +30,7 @@ public class MethodData {
         //double x = Double.parseDouble();
     }
 
-    public Class<?> getClassObj() {
+    public Class<?> getClassRef() {
         //output: package name testing class ReflectionTesting.MethodData
         //System.out.println("package name testing " + this.getClass());
 
@@ -43,5 +43,9 @@ public class MethodData {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public Object getClassObj() {
+        return getClassRef().getClass();
     }
 }

@@ -18,24 +18,25 @@ public class ReflectionFromJSON {
         ExampleAuton auton = gson.fromJson(file, ExampleAuton.class);
 
         //Fragment of when MethodData didn't use class
-        ExampleRobot r = new ExampleRobot();
+        //ExampleRobot r = new ExampleRobot();
 
 
         //TODO make this be able to run LinearOpMode functions as well, not just robot. Could be achieved by implementing robot functionality into DejaVuLinearOpMode or robot.sleep point to caller.sleep
+        //TODO make it not instantiate a new object every time
         for(MethodData data : auton.methods) {
             try{
                 if(data.functionParams != null) {
-                    Method method = data.getClassObj().getMethod(data.functionName, data.getParamTypes());
+                    Method method = data.getClassRef().getMethod(data.functionName, data.getParamTypes());
                     //Method method = ExampleRobot.class.getMethod(data.functionName, data.getParamTypes());
-                    method.invoke(r, data.functionParams);
+                    method.invoke(data.getClassRef().newInstance(), data.functionParams);
                 }
                 else {
-                    Method method = data.getClassObj().getMethod(data.functionName);
+                    Method method = data.getClassRef().getMethod(data.functionName);
                     //Method method = ExampleRobot.class.getMethod(data.functionName);
-                    method.invoke(r);
+                    method.invoke(data.getClassRef().newInstance());
                 }
             }
-            catch(Exception e){
+            catch(Exception e) {
                 e.printStackTrace();
             }
         }

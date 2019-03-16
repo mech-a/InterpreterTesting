@@ -13,6 +13,15 @@
     {
       "className": "ExampleRobot",
       "functionName": "getGoldPosition"
+    },
+    {
+      "className": "ExampleRobot",
+      "functionName": "rotate",
+      "functionParams": [
+        "CW",
+        100,
+        0.3
+      ]
     }
   ]
 }
